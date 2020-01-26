@@ -1,0 +1,58 @@
+CURSO PROFESIONAL DE GIT Y GITHUB
+
+GIT FUE CREADO POR LA FUNDACIÓN QUE INICIO LINUX
+
+git config --list --> ver configuración por defecto que tiene git
+git config --list --show-origin -> ver donde estan guardadas esas configuraciones
+git config --global user.name “Fernando Romero” --> asignar un username al Git
+git config --global user.mail "juanfernandoro@ufps.edu.co" --> asignar un email al username
+
+git init – Inicia en el directorio un repositorio
+git add biografia.txt – El sistema de control de versiones (GIT) se entera de que existe ese archivo
+git add . – Git se entera de todos los archivos que han sido modificados
+git rm . – Remueve todos los archivos que se encuentran en el staging
+git rm biografia.txt – Remueve un archivo especifico del staging
+git rm --cached biografia.txt – lo saca de memoria ram
+git commit -am “versión 1” – Envia el archivo a la BD de GIT, para controlar sus cambios, añadiendole un mensaje
+
+git commit -a --> Hace add y commit al tiempo, pero abre la consola de vim para escribir un mensaje
+git commit -a “Mensaje” --> Hace add y commit al tiempo, solo sirve en archivos en que ya haya hecho add antes
+
+git status – Ver el estado de cambios en los archivos
+
+git show – Todos los cambios historicos hechos, lineas, fechas, y autor
+
+git log biografia.txt – Todos los cambios en un archivo en especifico
+
+git log --stat --> mira el historial de cambio y muestra archivos cambiados
+
+pwd – Te muestra la ruta donde estoy parado en la consola
+
+git checkout – Trae los cambios de otro commit
+
+git checkout master Proyecto1/historia.txt --> vuelve a la version mas reciente del archivo
+
+git reset --> Nos ayuda a volver a un commit especifico, pero ya no podemos devolvernos. Es decir
+volvemos al pasado, pero ya no podemos volver al futuro
+
+git reset idCommit --hard --> Borrando toda la info del area de staging (y perdiendo todo para siempre)
+git reset idCommit --soft --> Mantiene los archivos del area de staging para poder aplicar los ultimos cambios pero desde un commit anterior
+git reset idCommit --HEAD --> Pasa los cambios de un archivo fuera del area de staging, pero los conserva el disco. Que los ultimos cambios en los archivos no se envien al commit especifico. A menos que los incluyamos con . add
+git rm --> Eliminar archivos de Git sin eliminar su historial del sistema de versiones
+Los archivos deben estar totalmente en stagin ( . add)
+git rm --cached: Elimina los archivos del área de Staging y del proximo
+commit pero los mantiene en nuestro disco duro
+git rm --force: Elimina los archivos de Git y del disco duro.
+
+git clone url --> Crea una copia del master en mi local. Descarga la base de datos remota del repositorio a mi entorno local
+
+git push – Enviar cambios hacia un repositorio remoto
+
+git fetch --> Trae los cambios del repositorio remoto pero no los mezcla con mis archivos.
+
+git pull – Une los cambios de un repositorio remoto con en el local
+
+git branch cabecera --> crea una nueva rama desde el commit actual, llamada cabecera
+
+git checkout cabecera --> se traslada a la rama cabecera
+
